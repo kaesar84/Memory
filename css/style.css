@@ -1,0 +1,53 @@
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #52b788;
+  padding: 25px;
+}
+
+#mesa {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+ 
+}
+
+.tarjeta {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  background-color: #4a7c59;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.tarjeta__contenido {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  border-radius: 5px;
+  padding: 2rem;
+  background-color: #d8f3dc;
+  box-shadow: 10px 10px 21px -8px rgba(0, 0, 0, 0.4);
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+}
+
+
+
+.tarjeta.descubierta {
+  transform: rotateY(-180deg);
+}
