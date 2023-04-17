@@ -22,12 +22,25 @@ var totalTarjetas = grupoTarjetas4.concat(grupoTarjetas4);
 // añadir valor
 // var nuevoTotalTarjetas = totalTarjetas.push("nuevo");
 
+function barajarTarjetas(){
+  var resultado;
+  resultado =  totalTarjetas.sort(function(){
+  return 0.5 - Math.random();
+  });
+  return resultado;
+}
+
+
+
+
+
 function reparteTarjetas() {
   var mesa = document.querySelector("#mesa");
+  var tarjetasBarajadas = barajarTarjetas();
   // vacíamo de contenido el div mesa en el HTML
   mesa.innerHTML = "";
 
-  totalTarjetas.forEach(function (elemento) {
+  tarjetasBarajadas.forEach(function (elemento) {
     // elemento que contiene el array
     
     var tarjeta = document.createElement("div");
