@@ -51,3 +51,7 @@ main {
 .tarjeta.descubierta {
   transform: rotateY(-180deg);
 }
+
+.acertada{
+  opacity: 0;
+}

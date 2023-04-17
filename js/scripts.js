@@ -56,7 +56,7 @@ function reparteTarjetas() {
 
 function descubrir() {
   var descubiertas;
-  var totalDescubierta = document.querySelectorAll(".descubierta");
+  var totalDescubierta = document.querySelectorAll(".descubierta:not(.acertada)");
 
   if (totalDescubierta.length > 1) {
     return;
@@ -64,19 +64,38 @@ function descubrir() {
 
   this.classList.add("descubierta");
 
-  descubiertas = document.querySelectorAll(".descubierta");
+  descubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
   if (descubiertas.length < 2) {
     return;
   }
 
-  // console.log(descubiertas[0].textContent);
-  // console.log(descubiertas[1].textContent);
+  comparar(descubiertas);
+}
 
-  if (descubiertas[0].dataset.valor === descubiertas[1].dataset.valor) {
-    console.log("ACERTADO");
+function comparar(tarjetasAComparar) {
+  if (
+    tarjetasAComparar[0].dataset.valor === tarjetasAComparar[1].dataset.valor
+  ) {
+    acierto(tarjetasAComparar);
   } else {
-    console.log("ERROR");
+    error(tarjetasAComparar);
   }
+}
+
+function acierto(lasTarjetas) {
+  console.log("ACERTADO");
+  lasTarjetas.forEach(function(elemento){
+    elemento.classList.add("acertada");
+  })
+
+}
+
+function error(lasTarjetas) {
+  console.log("ERROR");
+  lasTarjetas.forEach(function(elemento){
+    elemento.classList.remove("descubierta");
+  })
+  
 }
 
 reparteTarjetas();
