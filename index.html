@@ -1,26 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory</title>
     <link rel="stylesheet" href="/css/style.css">
-    
+
 </head>
+
 <body>
+    <header class="cabecera">
+        <div class="contadores">
+            <div class="contador-item">
+                <h4 class="cabecera-titulo">Movimientos</h4>
+                <div class="cabecera-num">
+                    <span id="mov">00</span>/<span id="mov-total">20</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="contador-item">
+            <h4 class="cabecera-titulo">Tiempo</h4>
+            <div class="cabecera-num">
+                <span id="minutos">00</span>:<span id="segundos">00</span>
+            </div>
+        </div>
+
+    </header>
     <main>
-<div id="mesa" class="mesa">
-    
-</div>
+
+        <div id="mesa" class="mesa"> </div>
+
+
+        
 
     </main>
+    <div id="feedback" class="feedback">
+        <div class="modal">
+            <h2 class="ti_modal">Buen Trabajo</h2>
+            <button id="reiniciar" class="reiniciar">Reiniciar</button>
+        </div>
+    </div>
 
-<script src="js/variables-globales.js"></script>
-<script src="js/baraja-reparte.js"></script>
-<script src="js/descubrir-comparar.js"></script>
-<script src="js/acierto-error.js"></script>   
-<script src="js/iniciar.js"></script>
+    <script src="js/variables-globales.js"></script>
+    <script src="js/baraja-reparte.js"></script>
+    <script src="js/descubrir-comparar.js"></script>
+    <script src="js/acierto-error.js"></script>
+    <script src="js/cronometro.js"></script>
+    <script src="js/contador.js"></script>
+    <script src="js/finalizar.js"></script>
+    <script src="js/iniciar.js"></script>
 
 </body>
+
 </html>

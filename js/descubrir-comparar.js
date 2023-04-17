@@ -1,5 +1,6 @@
 function descubrir() {
     var descubiertas;
+    var tarjetaPendientes;
     var totalDescubierta = document.querySelectorAll(".descubierta:not(.acertada)");
   
     if (totalDescubierta.length > 1) {
@@ -14,6 +15,13 @@ function descubrir() {
     }
   
     comparar(descubiertas);
+    actualizarContador();
+
+    tarjetaPendientes=document.querySelectorAll(".tarjeta:not(.acertada)");
+
+    if(tarjetaPendientes.length === 0){
+      finalizar();
+    }
   }
   
   
